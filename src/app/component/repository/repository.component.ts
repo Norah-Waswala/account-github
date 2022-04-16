@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Repository } from 'src/app/class/repository';
+import { User } from 'src/app/class/user';
 @Component({
   selector: 'app-repository',
   templateUrl: './repository.component.html',
