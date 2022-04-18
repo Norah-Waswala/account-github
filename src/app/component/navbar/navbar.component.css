@@ -1,0 +1,11 @@
+.navbar{
+    text-align: center;
+    color: rgb(238, 255, 80);
+  }
+  .navbar-nav{
+    padding: 5px;
+    
+  }
+  .nav-item{
+    padding: 5px;
+  } 

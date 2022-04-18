@@ -1,1 +1,60 @@
-<input type="text" placeholder="enter username">
+
+
+
+
+<div *ngIf="users">
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">
+           
+           {{users.name}}<small>({{users.login}})</small> 
+           {{users.location}}
+          
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="{{users.avatar_url}}" class="img-circle img-responsive" alt="profile image">
+                    <!-- <input type="search" [(ngModel)]="userName" id="searchQuery" name="username" placeholder="enter username" (keyup)="findUser()" value="" />   -->
+                </div>
+                <div class="col-sm-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
+                
+                        <li class="list-group-item" *ngIf="users.hireable">{{users.hireable}}</li>
+                        <li class="list-group-item" *ngIf="users.blog" ><a href="{{users.blog}}" target="_blank">{{users.blog}}</a></li>
+                        <li class="list-group-item" *ngIf="users.email" ><a href="emailto:{{users.email}}" target="_blank">{{users.email}}</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <p>
+                            <span class="label label-default">{{users.followers}} followers</span><br>
+                            <span class="label label-default">{{users.following}} following</span><br>
+                            <span class="label label-default">{{users.public_repos}} public repos</span><br>
+                            <span class="label label-default">{{users.updated_at|date}} </span>
+                        </p>
+                        <p><a href="{{users.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6>Repositories</h6>
+                        </div>
+                        <div class="panel-body" *ngFor="let repo of repos">
+                            <p class="clearfix">
+                               {{repos.name}} <a href="{{repos.html_url}}" class="btn btn-warning">view project on github</a> 
+                                                       </p>
+                                <p>{{repos.description}}</p>
+                            </div>
+                        
+     <form action="">
+         <input class="form-control" type="text" placeholder="username" name="userName" [(ngModel)]="userName" (keyup)="findUser()"> 
+     </form>
+   
+ 
+
+
+
+
+ 
