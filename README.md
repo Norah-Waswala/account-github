@@ -28,3 +28,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technologies Used
+  * HTML
+  * CSS
+  * Angular
+  ## Set up instructions
+  * Open Terminal {Ctrl+Alt+T}
+  * Fork the repository 
+  * Git clone https://github.com/Norah-Waswala/quotes-corner.git
+  * code . or atom . depending on the text editor of your choice
+## Support and contact details
+For more information, find me at my email (https://norah.waswala15@gmail.com)
+
+## License and copyright information
+[MIT LICENSE](LICENSE)
+
+Copyright (C) [2022] [@ Norah-Waswala]
