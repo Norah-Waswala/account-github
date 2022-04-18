@@ -1,5 +1,7 @@
 
-
+<form action="">
+    <input class="form-control" type="text" placeholder="username" name="userName" [(ngModel)]="userName" (keyup)="findUser()"> 
+</form>
 
 
 <div *ngIf="users">
@@ -43,14 +45,12 @@
                         </div>
                         <div class="panel-body" *ngFor="let repo of repos">
                             <p class="clearfix">
-                               {{repos.name}} <a href="{{repos.html_url}}" class="btn btn-warning">view project on github</a> 
+                               {{repo.name}} <a href="{{repos.html_url}}" class="btn btn-secondary">view project on github</a> 
                                                        </p>
-                                <p>{{repos.description}}</p>
+                                <p>{{repo.description}}</p>
                             </div>
                         
-     <form action="">
-         <input class="form-control" type="text" placeholder="username" name="userName" [(ngModel)]="userName" (keyup)="findUser()"> 
-     </form>
+     
    
  
 

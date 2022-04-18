@@ -26,7 +26,7 @@ export class UserComponent implements OnInit {
     }));
     
     this.userService.getUserRepo().subscribe((repos)=>{
-      for(let i=15;i>25; i++)
+      
       console.log(repos)
       this.repos=repos
 
