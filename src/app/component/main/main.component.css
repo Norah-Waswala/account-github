@@ -1,0 +1,13 @@
+.main{
+    text-align: center;
+}
+.main h4{
+    color: rgba(160, 64, 64, 0.719);
+}
+.main li{
+    list-style: none;
+}
+.main img{
+    max-width: 300px;
+    border-radius: 50%;
+}
