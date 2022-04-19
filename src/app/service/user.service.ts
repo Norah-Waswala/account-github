@@ -11,7 +11,7 @@ export class UserService {
    userName:string ="Norah-Waswala"
   
    _url='https://api.github.com/users';
-  updateProfile: any;
+  
   constructor(private http:HttpClient) {
     console.log('lets get started')
   }
@@ -31,20 +31,20 @@ export class UserService {
   getProfileInfo(){
     return this.http.get( 'https://api.github.com/users/' + this.userName+`?acess_token=`+environment.apiKey)
   }
-  getUserRepo(){
-    return this.http.get('https://api.github.com/users/' + this.userName+`/repos`)
-  }
-  getRepos(users:any){
-    let userRepo=
-    this.http.get('https://api.github.com/users/' + this.userName+`/repos?acess_token=`+environment.apiKey)
-    console.log(userRepo)
-    return userRepo
-  }
+  // getUserRepo(){
+  //   return this.http.get('https://api.github.com/users/' + this.userName+`/repos`)
+  // }
+  // getRepos(users:any){
+  //   let userRepo=
+  //   this.http.get('https://api.github.com/users/' + this.userName+`/repos?acess_token=`+environment.apiKey)
+  //   console.log(userRepo)
+  //   return userRepo
+  // }
  
 //  getInitialRepos(repos: any[]){
 //     return this.http.get(`${environment.API_URL}/users/blancc-page/repos?sort=created`);
   // }
-  updateUsername(userName:string){
+  updateProfile(userName:string){
     this.userName=userName
   }
   }

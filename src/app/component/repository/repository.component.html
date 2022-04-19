@@ -1,1 +1,31 @@
-<p>repository works!</p>
+ <div class="panel panel-default">
+    <div class="panel-heading">
+        <h5 class="panel-title">{{users.name}}repositories</h5>
+    </div>
+    <br>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <div *ngFor="let repo of repos"><hr>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h6>{{repo.name}} </h6><hr>
+                            <a href="{{repos.html_url}}" id="panel-body"class="btn btn-danger">view project on github</a> 
+                            <p>{{repo.description}}</p>
+                        </div>
+                        <div class="col-md-3">
+                            {{repo.watchers}}watchers <br>
+                            {{repo.forks}}forks
+                        </div>
+                    </div>
+
+                </div>
+                
+               
+            </div>
+            
+            
+        </div>
+    </div>
+</div> 

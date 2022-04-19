@@ -4,10 +4,10 @@ import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './component/user/user.component';
-import { RepositoryComponent } from './component/repository/repository.component';
+// import { UserComponent } from './component/user/user.component';
+// import { RepositoryComponent } from './component/repository/repository.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { MainComponent } from './component/main/main.component';
 import { DateCountPipe } from './date-count.pipe';
@@ -15,8 +15,9 @@ import { DateCountPipe } from './date-count.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    RepositoryComponent,
+    // UserComponent,
+    // RepositoryComponent,
+    routingComponents,
     NavbarComponent,
     MainComponent,
     DateCountPipe

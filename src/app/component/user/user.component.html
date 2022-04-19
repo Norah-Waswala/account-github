@@ -24,9 +24,9 @@
                     <ul class="list-group">
                         <li class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
                 
-                        <li class="list-group-item" *ngIf="users.hireable">{{users.hireable}}</li>
-                        <li class="list-group-item" *ngIf="users.blog" ><a href="{{users.blog}}" target="_blank">{{users.blog}}</a></li>
-                        <li class="list-group-item" *ngIf="users.email" ><a href="emailto:{{users.email}}" target="_blank">{{users.email}}</a></li>
+                        <li class="list-group-item" *ngIf="users.hireable">hireable: {{users.hireable}}</li>
+                        <li class="list-group-item" *ngIf="users.blog" ><a href="{{users.blog}}" target="_blank">Blog: {{users.blog}}</a></li>
+                        <li class="list-group-item" *ngIf="users.email" ><a href="emailto:{{users.email}}" target="_blank">Email: {{users.email}}</a></li>
                        
                     </ul>
                 </div>
@@ -39,42 +39,14 @@
                             <span class="label label-default">{{users.updated_at|date}} </span>
                         </p>
                         <p><a href="{{users.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
+                        <!-- <button (click)="toggleDetails()">click to view repo</button> -->
+                        <!-- <app-repository></app-repository> -->
                     </div>
                 </div>
             </div>
         </div>
         <br>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h5 class="panel-title"> {{users.name}} Repositories</h5>
-                        </div>
-                        <br>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div *ngFor="let repo of repos"><hr>
-    
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h6>{{repo.name}} </h6><hr>
-                                                <a href="{{repos.html_url}}" id="panel-body"class="btn btn-danger">view project on github</a> 
-                                                <p>{{repo.description}}</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                {{repo.watchers}}watchers <br>
-                                                {{repo.forks}}forks
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    
-                                   
-                                </div>
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
+                   
 </div>                    
      
    
