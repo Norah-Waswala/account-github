@@ -17,7 +17,9 @@ export class RepositoryComponent implements OnInit {
   user!: User ;
   users:any = []
   info:any=[]
+  data!: string;
   @Input()userRepos!: Repository
+  userService: any;
   constructor(private repositoryService:RepositoryService) { 
   this.repositoryService.getUserRepo().subscribe((repos)=>{
     console.log(repos)
@@ -31,10 +33,17 @@ export class RepositoryComponent implements OnInit {
   }
   findUser(){
     // this.display=false
+    this.userService.updateProfile(this.userName);
+    this.userService.getProfileInfo().subscribe((data:string)=>{
+      console.log(data)
+      this.data=data
+    })
+  
+    // this.display=false
   this.repositoryService.getRepos(this.userName).subscribe((Info)=>{
    
       this.info=Info
     })
     
 }
-  }
+}

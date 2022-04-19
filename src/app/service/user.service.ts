@@ -43,7 +43,7 @@ export class UserService {
  
 //  getInitialRepos(repos: any[]){
 //     return this.http.get(`${environment.API_URL}/users/blancc-page/repos?sort=created`);
-  // }
+//   }
   updateProfile(userName:string){
     this.userName=userName
   }

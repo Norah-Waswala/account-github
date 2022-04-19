@@ -8,7 +8,7 @@ import { UserComponent } from './component/user/user.component';
 const routes: Routes = [
   {path: 'user',component: UserComponent},
   {path: 'repository', component:RepositoryComponent},
-  {path: 'main', component:MainComponent}
+  {path: '', component:MainComponent}
   
 ];
 

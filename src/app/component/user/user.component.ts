@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 // import { Observable } from 'rxjs';
 import { NgForm } from '@angular/forms';
 import { UserService } from 'src/app/service/user.service'
-import { Repository } from 'src/app/class/repository';
+import { RepositoryComponent } from '../repository/repository.component';
 
 
 @Component({
@@ -20,8 +20,8 @@ export class UserComponent implements OnInit {
   display:any=[]
   user!: User ;
   users:any = [];
-  @Output()infoOutput=new EventEmitter<any>()
-  userRepos=new Repository()
+  // @Output()infoOutput=new EventEmitter<any>()
+  // userRepos=new Repository()
   constructor(private userService:UserService) {
    this.userService.getUserInfo().subscribe((users => {
     //  console.log(users)
@@ -32,7 +32,7 @@ export class UserComponent implements OnInit {
     // this.userService.getUserRepo().subscribe((repos)=>{
       
     //   console.log(repos)
-      // this.repos=repos
+    //   this.repos=repos
 
     // })
   }
